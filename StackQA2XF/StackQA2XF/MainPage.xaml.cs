@@ -30,11 +30,11 @@ namespace StackQA2XF
             }); ;
         }
 
-        private void OnStringSet(Application source, string imageStream)
+        private void OnStringSet(Application source, string lableText)
         {
             stack.Children.Add(new Label
             {
-                Text = imageStream,
+                Text = lableText,
                 VerticalOptions = LayoutOptions.Center
             });
             stack.Children.Add(new Image
