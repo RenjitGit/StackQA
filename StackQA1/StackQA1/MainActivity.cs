@@ -1,10 +1,12 @@
 ﻿using System;
 using System.IO;
 using Android.App;
+using Android.Content;
 using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
+using Android.Support.V4.App;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
@@ -16,6 +18,7 @@ namespace StackQA1
     public class MainActivity : AppCompatActivity
     {
         private Bitmap bitmap;
+        private int requestId;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -91,5 +94,22 @@ namespace StackQA1
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
+
+        public void FullScreenNotification()
+        {
+            //var intent = new Intent(Application.Context, typeof(MainActivity));
+            //intent.AddFlags(ActivityFlags.NewTask);
+            //Application.Context.StartActivity(intent);
+            //PendingIntent fullScreenIntent = PendingIntent.GetActivity(Application.Context, requestId++, intent, PendingIntentFlags.CancelCurrent);
+
+            //var builder = new NotificationCompat.Builder(Application.Context, channelID)
+            //                .SetAutoCancel(false)
+            //                .SetOngoing(true)
+            //                .SetVisibility(NotificationCompat.VisibilityPublic)
+            //                .SetSmallIcon(Resource.Drawable.applogo)
+            //                .SetFullScreenIntent(fullScreenIntent, true);
+        }
+
     }
 }
