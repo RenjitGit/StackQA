@@ -28,7 +28,7 @@ namespace StackQAXFNotification.Droid.Service
 
         private NotificationCompat.Builder CreateNotificationBuilder(string title, string message)
         {
-            PendingIntent fullScreenIntent = GetIncomingCallPendingIntent();
+            PendingIntent fullScreenIntent = GetPendingIntent();
             var builder = new NotificationCompat.Builder(Android.App.Application.Context, _channelID)
                       .SetContentTitle(title)
                       .SetContentText(message)
@@ -36,13 +36,13 @@ namespace StackQAXFNotification.Droid.Service
                       .SetOngoing(true)
                       .SetVisibility(NotificationCompat.VisibilityPublic)
                       .SetSmallIcon(Resource.Drawable.navigation_empty_icon)
-                      .SetFullScreenIntent(fullScreenIntent, true);
+                      .SetContentIntent(fullScreenIntent);
             builder.SetPriority(NotificationCompat.PriorityHigh);
             return builder;
         }
 
         //Create intent for opening the related view.
-        private PendingIntent GetIncomingCallPendingIntent(bool startActivity = true)
+        private PendingIntent GetPendingIntent(bool startActivity = true)
         {
             var intent = new Intent(Android.App.Application.Context, typeof(MainActivity));
             intent.PutExtra("LaunchData", "testData");
