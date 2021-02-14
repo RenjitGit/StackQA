@@ -46,7 +46,7 @@ namespace StackQAXFNotification.Droid.Service
         {
             var intent = new Intent(Android.App.Application.Context, typeof(MainActivity));
             intent.PutExtra("LaunchData", "testData");
-            intent.AddFlags(ActivityFlags.SingleTop);
+            intent.AddFlags(ActivityFlags.NewTask);
             if (startActivity)
                 Android.App.Application.Context.StartActivity(intent);
             return PendingIntent.GetActivity(Android.App.Application.Context, _requestCode++, intent, PendingIntentFlags.CancelCurrent);

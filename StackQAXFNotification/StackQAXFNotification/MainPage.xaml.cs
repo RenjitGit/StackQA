@@ -19,9 +19,17 @@ namespace StackQAXFNotification
 
         public async Task Notification()
         {
-            await Task.Delay(2000);
-            INotificationHandler service = DependencyService.Get<INotificationHandler>();
-            service.CreateNotification("Test title", "Test content");
+            try
+            {
+                await Task.Delay(2000);
+                INotificationHandler service = DependencyService.Get<INotificationHandler>();
+                service.CreateNotification("Test title", "Test content");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+            }
+         
         }
     }
 }
