@@ -13,10 +13,13 @@ namespace StackQA2XF
     {
         public MainPage()
         {
+            this.BindingContext = new MainViewModel();
             InitializeComponent();
             MessagingCenter.Instance.Subscribe<Application, Stream>(Application.Current, "ImageSent", OnImageSent);
             MessagingCenter.Instance.Subscribe<Application, string>(Application.Current, "StringTest", OnStringSet);
         }
+
+       
 
         private void OnImageSent(Application source, Stream imageStream)
         {
@@ -44,6 +47,48 @@ namespace StackQA2XF
                 WidthRequest = 100,
                 HeightRequest = 100,
             });
+        }
+    }
+
+    public class MainViewModel : INotifyPropertyChanged
+    {
+        private string _titleText = "Good morning";
+        public string TitleText
+        {
+            get
+            {
+                return _titleText;
+            }
+            set
+            {
+                _titleText = value;
+                OnPropertyChange(nameof(TitleText));
+            }
+        }
+
+        public MainViewModel()
+        {
+            TitleText = "Hi Good morning";
+            WhileLoop();
+        }
+
+        public async Task WhileLoop()
+        {
+            int i = 0;
+            while (true)
+            {
+                await Task.Delay(1000);
+                TitleText = $"Good morning {i++}";
+            }
+        }
+       
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void OnPropertyChange(string propName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propName));
+            }
         }
     }
 }

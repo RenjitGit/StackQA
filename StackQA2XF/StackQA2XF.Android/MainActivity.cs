@@ -30,7 +30,8 @@ namespace StackQA2XF.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
 
-            DynamicTrigger();
+
+            //DynamicTrigger();
 
             if (Intent.Action == "android.intent.action.SEND")
             {
@@ -74,4 +75,5 @@ namespace StackQA2XF.Droid
             MessagingCenter.Send(Xamarin.Forms.Application.Current, "StringTest", "Lable's text set from trigger of 2 seconds");
         }
     }
+
 }
