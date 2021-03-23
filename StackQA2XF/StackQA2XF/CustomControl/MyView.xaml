@@ -2,6 +2,6 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="StackQA2XF.CustomControl.MyCustomControl">
     <ContentView.Content>
-        <Label x:Name="cLabel"/>
+        <Entry x:Name="CustomEntry"/>
     </ContentView.Content>
 </ContentView>

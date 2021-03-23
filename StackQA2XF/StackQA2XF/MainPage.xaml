@@ -23,7 +23,7 @@
             </Label.FormattedText>
         </Label>
 
-         <customcontrols:MyCustomControl LableText="{Binding TitleText}"/>
+         <customcontrols:MyCustomControl EntryText="{Binding TitleText}"/>
 
          <!--<customcontrols:MyView LableText="Direct Value"/>-->
 

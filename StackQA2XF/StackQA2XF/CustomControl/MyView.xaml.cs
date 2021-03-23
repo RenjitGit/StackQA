@@ -6,19 +6,19 @@ namespace StackQA2XF.CustomControl
 {
     public partial class MyCustomControl : ContentView
     {
-        public static readonly BindableProperty LableTextProperty =
-            BindableProperty.Create(nameof(LableText), typeof(string), typeof(MyCustomControl), default(string), BindingMode.OneWay);
+        public static readonly BindableProperty EntryTextProperty =
+            BindableProperty.Create(nameof(EntryText), typeof(string), typeof(MyCustomControl), default(string), BindingMode.TwoWay);
 
-        public string LableText
+        public string EntryText
         {
-            get { return (string)GetValue(LableTextProperty); }
-            set { SetValue(LableTextProperty, value); }
+            get { return (string)GetValue(EntryTextProperty); }
+            set { SetValue(EntryTextProperty, value); }
         }
 
         public MyCustomControl()
         {
             InitializeComponent();
-            cLabel.SetBinding(Label.TextProperty, new Binding(nameof(LableText), source: this));
+            CustomEntry.SetBinding(Entry.TextProperty, new Binding(nameof(EntryText), source: this));
         }
     }
 }

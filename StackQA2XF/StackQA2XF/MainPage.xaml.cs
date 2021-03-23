@@ -65,22 +65,6 @@ namespace StackQA2XF
                 OnPropertyChange(nameof(TitleText));
             }
         }
-
-        public MainViewModel()
-        {
-            TitleText = "Hi Good morning";
-            WhileLoop();
-        }
-
-        public async Task WhileLoop()
-        {
-            int i = 0;
-            while (true)
-            {
-                await Task.Delay(1000);
-                TitleText = $"Good morning {i++}";
-            }
-        }
        
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChange(string propName)
