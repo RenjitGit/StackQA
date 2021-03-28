@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="StackQA2XF.Frame1">
+    <ContentPage.Content>
+
+        <Frame
+        RelativeLayout.YConstraint="{ConstraintExpression
+        Type=Constant,
+        Constant=11}"
+        RelativeLayout.XConstraint="{ConstraintExpression
+        Type=Constant,
+        Constant=310}"
+        CornerRadius="10"
+        HeightRequest="100"
+        BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center">
+            <!--<Frame.GestureRecognizers>
+           <TapGestureRecognizer Tapped="Graph_Clicked"/>
+        </Frame.GestureRecognizers>-->
+            <Grid HorizontalOptions="Center" VerticalOptions="Center">
+                <BoxView
+                  Color="#404040"
+                  CornerRadius="10"
+                  Opacity="0.6"/>
+                <Image   
+                  Source="Chart.png"/>
+            </Grid>
+        </Frame>
+
+        <!--<Frame
+        RelativeLayout.YConstraint="{ConstraintExpression
+        Type=Constant,
+        Constant=11}"
+        RelativeLayout.XConstraint="{ConstraintExpression
+        Type=Constant,
+        Constant=310}"
+        CornerRadius="100"
+        HeightRequest="100"
+        BackgroundColor="Transparent">
+          
+            <Grid>
+                <BoxView
+                  Color="#404040" HorizontalOptions="Center" VerticalOptions="Center"
+                  CornerRadius="10" HeightRequest="50" WidthRequest="50"
+                  Opacity="0.6"
+                  Margin="10"/>
+                <Image               
+                  Margin="10"
+                  HorizontalOptions="Center" VerticalOptions="Center"
+                  Source="Chart.png"/>
+            </Grid>
+        </Frame>-->
+
+    </ContentPage.Content>
+</ContentPage>

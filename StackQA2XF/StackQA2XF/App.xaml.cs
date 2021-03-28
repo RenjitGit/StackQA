@@ -10,7 +10,7 @@ namespace StackQA2XF
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new CalculationQ();
         }
 
         protected override void OnStart()

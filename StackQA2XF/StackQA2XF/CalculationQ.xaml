@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="StackQA2XF.CalculationQ">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Margin="0,50,0,0" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand" Padding="10">
+
+
+            <Label  Text="Rate" Margin="2,-10" FontAttributes="Bold" />
+
+
+            <Entry x:Name="Rate"  Text="{Binding BindSaleEntryModel.Rate,Mode=TwoWay}"
+                   HorizontalOptions="FillAndExpand" Keyboard="Numeric" ReturnType="Next" />
+
+            <Label x:Name="RateError" TextColor="Red" IsVisible="false" FontAttributes="Italic" />
+
+            <Label Text="Quantity"  FontAttributes="Bold" />
+
+            <Entry x:Name="Quantity"   Text="{Binding BindSaleEntryModel.Quantity,Mode=TwoWay}"
+                   HorizontalOptions="FillAndExpand" Keyboard="Numeric" ReturnType="Next" />
+            <Label x:Name="QuantityError" Margin="2,-10,2,5" TextColor="Red" IsVisible="false" FontAttributes="Italic" />
+
+            <Label Text="Total"  FontAttributes="Bold" />
+
+            <Entry x:Name="Total"  IsEnabled="False"
+                   Text="{Binding BindSaleEntryModel.Total,Mode=TwoWay}"
+                   HorizontalOptions="FillAndExpand" ReturnType="Next"/>
+
+            <Label Text="Discount (Rs)"  FontAttributes="Bold" />
+
+            <Entry x:Name="Discount"  Text="{Binding BindSaleEntryModel.Discount,Mode=TwoWay}"
+                   HorizontalOptions="FillAndExpand" 
+                   Keyboard="Numeric" ReturnType="Next"/>
+            <Label x:Name="DiscountError"  TextColor="Red" IsVisible="false" FontAttributes="Italic" />
+
+            <Label Text="Paid Amount"  FontAttributes="Bold" />
+
+            <Entry x:Name="PaidAmount"  Text="{Binding BindSaleEntryModel.PaidAmount,Mode=TwoWay}"
+                   HorizontalOptions="FillAndExpand" Keyboard="Numeric" ReturnType="Next"/>
+            <Label x:Name="PaidAmountError"  TextColor="Red" IsVisible="false" FontAttributes="Italic" />
+
+            <Label Text="Balance"  FontAttributes="Bold" />
+
+            <Entry x:Name="Balance"   IsEnabled="False"
+                   Text="{Binding BindSaleEntryModel.Balance,Mode=TwoWay}"
+                   HorizontalOptions="FillAndExpand" />
+
+
+            <Grid HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Text="Save" x:Name="btnSave" HorizontalOptions="FillAndExpand" 
+                        CornerRadius="10" BorderWidth="2" BackgroundColor="#ff6633" TextColor="#fff" Margin="2" 
+                        Grid.Column="0" Grid.Row="0" Command="{Binding SaveCommand}" />
+
+                <Button Text="CLEAR" x:Name="btnClear" HorizontalOptions="FillAndExpand"
+                        CornerRadius="10" BorderWidth="2" BackgroundColor="#bfbfbf" 
+                        TextColor="#fff" Margin="2" Grid.Column="1" Grid.Row="0" Command="{Binding ClearCommand}" />
+            </Grid>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
