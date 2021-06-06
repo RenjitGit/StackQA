@@ -2,53 +2,38 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="StackQA2XF.Frame1">
     <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions></Grid.RowDefinitions>
 
-        <Frame
-        RelativeLayout.YConstraint="{ConstraintExpression
-        Type=Constant,
-        Constant=11}"
-        RelativeLayout.XConstraint="{ConstraintExpression
-        Type=Constant,
-        Constant=310}"
-        CornerRadius="10"
-        HeightRequest="100"
-        BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center">
-            <!--<Frame.GestureRecognizers>
-           <TapGestureRecognizer Tapped="Graph_Clicked"/>
-        </Frame.GestureRecognizers>-->
-            <Grid HorizontalOptions="Center" VerticalOptions="Center">
-                <BoxView
-                  Color="#404040"
-                  CornerRadius="10"
-                  Opacity="0.6"/>
-                <Image   
-                  Source="Chart.png"/>
-            </Grid>
-        </Frame>
-
-        <!--<Frame
-        RelativeLayout.YConstraint="{ConstraintExpression
-        Type=Constant,
-        Constant=11}"
-        RelativeLayout.XConstraint="{ConstraintExpression
-        Type=Constant,
-        Constant=310}"
-        CornerRadius="100"
-        HeightRequest="100"
-        BackgroundColor="Transparent">
-          
-            <Grid>
-                <BoxView
-                  Color="#404040" HorizontalOptions="Center" VerticalOptions="Center"
-                  CornerRadius="10" HeightRequest="50" WidthRequest="50"
-                  Opacity="0.6"
-                  Margin="10"/>
-                <Image               
-                  Margin="10"
-                  HorizontalOptions="Center" VerticalOptions="Center"
-                  Source="Chart.png"/>
-            </Grid>
-        </Frame>-->
+            <Image x:Name="imgStation1" Grid.Row="0" Grid.Column="0" BackgroundColor="White" Source="saturday.jpg"  Aspect="AspectFill" />
+            <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="StartAndExpand" Spacing="10" Margin="10">
+                <Label x:Name="lblLiveStation1"  Text="" FontSize="Small" TextColor="AntiqueWhite">
+                    <Label.FontFamily>
+                        <OnPlatform
+                         x:TypeArguments="x:String"
+                         Android="gothic.ttf#gothic"
+                         iOS="Optima-Regular" />
+                    </Label.FontFamily>
+                </Label>
+                <Label x:Name="lblDescriptionStation1"  Text="Loading..." FontSize="Medium" FontAttributes="Bold" TextColor="FloralWhite">
+                    <Label.FontFamily>
+                        <OnPlatform
+                         x:TypeArguments="x:String"
+                         Android="gothic.ttf#gothic"
+                         iOS="Optima-Regular" />
+                    </Label.FontFamily>
+                </Label>
+                <Label x:Name="lblTimeStation1"  Text="" FontSize="Small" FontAttributes="Bold" TextColor="GhostWhite">
+                    <Label.FontFamily>
+                        <OnPlatform
+                         x:TypeArguments="x:String"
+                         Android="gothic.ttf#gothic"
+                         iOS="Optima-Regular" />
+                    </Label.FontFamily>
+                </Label>
+                <ImageButton x:Name="imgPlayPause0" Grid.Row="0" VerticalOptions="End" HorizontalOptions="Start" Source="playlogo.png" BackgroundColor="Transparent" ></ImageButton>
+            </StackLayout>
+        </Grid>
 
     </ContentPage.Content>
 </ContentPage>

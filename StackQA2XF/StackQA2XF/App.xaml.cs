@@ -10,7 +10,7 @@ namespace StackQA2XF
         {
             InitializeComponent();
 
-            MainPage = new CalculationQ();
+            MainPage = new BluetoothPermissionPage();
         }
 
         protected override void OnStart()

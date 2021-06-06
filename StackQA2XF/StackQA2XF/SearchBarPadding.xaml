@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="StackQA2XF.SearchBarPadding">
+    <ContentPage.Content>
+        <StackLayout Margin="20,20">
+
+        <Label Margin="0,0,0,0" FontSize="20" TextColor="White">Page Title</Label>
+
+        <SearchBar Margin="0,0,0,0"
+                   Placeholder="Search"
+                   PlaceholderColor="White"
+                   BackgroundColor="OldLace"
+                   Text="asdf"
+                   
+                   TextColor="White">
+        </SearchBar>
+
+        <Label BackgroundColor="Gray" HeightRequest="50" HorizontalOptions="Fill" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White">
+            Full Width Content
+        </Label>
+
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

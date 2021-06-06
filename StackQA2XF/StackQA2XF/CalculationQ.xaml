@@ -5,6 +5,12 @@
         <StackLayout Orientation="Vertical" Margin="0,50,0,0" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand" Padding="10">
 
 
+             <Label HorizontalOptions="FillAndExpand" VerticalOptions="Center" 
+                                                   FontAttributes="Bold" FontSize="14" Grid.Row="0" 
+                                                   Grid.Column="1" 
+                                                   Text="{Binding BindSaleEntryModel.SaleDate, StringFormat='{0:MMMM d, yyyy}'}"                                                      
+                                                   Padding="15,0,0,0"></Label>
+
             <Label  Text="Rate" Margin="2,-10" FontAttributes="Bold" />
 
 

@@ -16,5 +16,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomControl\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>
