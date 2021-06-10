@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace StackQA2XF
+namespace StackQA3XF_Bluetooth
 {
     public partial class App : Application
     {
@@ -10,7 +10,7 @@ namespace StackQA2XF
         {
             InitializeComponent();
 
-            MainPage = new WebviewInList();
+            MainPage = new BluetoothPermissionPage();
         }
 
         protected override void OnStart()

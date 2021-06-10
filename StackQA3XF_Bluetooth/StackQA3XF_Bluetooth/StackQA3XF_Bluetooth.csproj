@@ -11,15 +11,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.1141" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CustomControl\" />
+    <None Remove="Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="Services\" />
-    <Folder Include="Base\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="Base\" />
   </ItemGroup>
 </Project>

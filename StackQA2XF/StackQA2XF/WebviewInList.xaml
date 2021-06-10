@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="StackQA2XF.WebviewInList">
+    <ContentPage.Content>
+        <ScrollView >
+            <StackLayout Orientation="Vertical" HeightRequest="300" WidthRequest="500" HorizontalOptions="StartAndExpand"  VerticalOptions="StartAndExpand">
+
+                 <WebView   Source="{Binding HtmlContent1}" BackgroundColor="SaddleBrown"
+                              HorizontalOptions="StartAndExpand"  VerticalOptions="StartAndExpand"
+                           HeightRequest="300" WidthRequest="500"/>
+
+                <!--<StackLayout BindableLayout.ItemsSource="{Binding SourceList}"
+             Orientation="Vertical" VerticalOptions="StartAndExpand">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
+                                <Label Text="{Binding HtmlContent}"   WidthRequest="404"
+                                  HeightRequest="100" />
+                                <WebView  Source="{Binding HtmlContent}" BackgroundColor="SaddleBrown"
+                                  WidthRequest="404"
+                                  HeightRequest="100" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>-->
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

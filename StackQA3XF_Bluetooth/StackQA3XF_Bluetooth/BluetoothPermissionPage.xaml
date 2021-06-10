@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="StackQA3XF_Bluetooth.BluetoothPermissionPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Spacing="50" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <StackLayout Orientation="Horizontal" HeightRequest="60" >
+                <Button Text="Has Bluetooth Permission" Clicked="HasBluetooth_Clicked" />
+                <Label x:Name="LabelHasPermission" VerticalOptions="Center" FontSize="Micro" Margin="10,0,0,0" TextColor="OrangeRed" Text="No" />
+            </StackLayout>
+            <Button Text="Request Bluetooth Permission" Clicked="RequestBluetooth_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
